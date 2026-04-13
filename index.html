@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Midorinime</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Typenote — W3.CSS: Jane Bloglife">
+  <meta name="keywords"    content="typenote, w3css, templates, jane, bloglife">
+  <meta name="author"      content="Gurov Dmitriy">
+  <meta name="robots"      content="noindex, follow">
+
+  <link rel="preload" href="font/woff2/Oswald-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/woff2/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/woff2/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" href="https://www.w3schools.com/w3css/4/w3.css"         as="style">
+  <link rel="preload" href="css/style.css"                                    as="style">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+   <link rel="shortcut icon" href="logo2-removebg-preview.png" type="image/x-icon">
+   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+   
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("btn").addEventListener("click", function() {
+        alert("Klik berhasil!");
+      });
+    });
+    </script>
+
+   <style>
+     button{
+
+position: absolute;
+
+right: 46px;
+
+display: inline-block;
+
+border: none;
+
+outline: none;
+
+background: none;
+
+font: arial bold;
+
+color: white;
+
+cursor: pointer;
+
+overflow: hidden;
+background-image: linear-gradient( 144deg, #080a08, #0b0f0d 50%, rgb(17, 19, 16)
+
+
+);
+
+
+}
+
+button::before{
+
+content: attr(data-text);
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+
+
+color: white;
+
+display: grid;
+
+place-items: center;
+
+transform: translateX(-105deg);
+
+transition: transform.25s;
+
+}
+
+button:hover::before{
+
+transform: none;
+
+}
+
+button span{
+
+display: inline-block;
+
+padding: 10px 20px;
+
+border: 2px solid #5842F3;
+
+transition :transform 0.25s;
+
+}button:hover span{
+  transform: translatex (105%)
+}
+
+
+
+
+   </style>
+
+</head>
+
+<body class="w3css-jane-bloglife ">
+
+  <header>
+
+    <h1 class="visually-hidden"> list </h1>
+
+    <a class="skip-link" href="#main">skip-link</a>
+
+    <nav class="w3-bar w3-black w3-hide-small">
+      <h2 class="visually-hidden">Navigation</h2>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">Facebook</span><span class="fa fa-facebook-official"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">Instagram</span><span class="fa fa-instagram"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">discord</span><span class="fa fa-flickr"></span></a>
+      <a class="w3-bar-item w3-button" href="https://x.com/crypto_hits" target="_blank" ><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">youtube</span><span class="fa fa-youtube"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">linkeding</span><span class="fa fa-linkedin"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">medium</span><span class="fa fa-medium"></span></a>
+      <a class="w3-bar-item w3-button w3-right" ><span class="visually-hidden">search</span><span class="fa fa-search"></span></a>
+      
+      <button class="w3-bar-item " data-text="Connect Wallet"  id="connectBtn" >Connect Wallet</button>
+      <button class="w3-bar-item w3-button" id="disconnectBtn" style="display:none;">Disconnect</button>
+      <p id="walletAddress"></p>
+   
+      
+      <script src="wallet.js" defer></script>
+      <script src="mint.js" defer></script>
+      <script src="main.js" defer></script>
+
+    </nav>
+
+   
+
+    <div class="w3-content ">
+
+      <div class="w3-container w3-padding-32  w3-center">
+        <p class="w3-xxxlarge usr-main-caption " tabindex="0" ><span class="text3d" style=color:#0dbd6b; >MIDORI</span><span class="text3d1">NIME</span></p> 
+        
+      </div>
+
+      
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+ 
+
+  
+
+
+
+
+  <main class="w3-content " id="main">
+
+    <div class="w3-row w3-padding-64 w3-white">
+
+
+ 
+
+      <div class="w3-col l8 w3-container">
+
+       
+        <article class="w3-white w3-margin-bottom">
+          <div class="w3-container">
+            <h2 tabindex="0" class="container">List Anime</h2> 
+
+<section class="container">
+
+
+
+
+            <div class="slider-wrapper">
+            <div class="slider">
+              <div class="grid-container">
+
+                <div id="slide-1" class="grid-item item-1"><img src="wallpapersden.com_senku-ishigami-dr-stone_wxl.jpg" alt="">
+                <a href="" class="text1">DR.STONE</a>
+                </div>
+                
+                <div id="slide-1" class="grid-item item-2"> <img src="Reincarnation-no-Kaben-Anime-Visual-1-e1768759295571.jpg" alt="">
+                <a href="" class="text1">Reincarnation no Kaben</a>
+                </div>
+                
+                <div id="slide-1" class="grid-item item-3"> <img src="visual-1200x640.jpg" alt="">
+                <a href="" class="text1">Dorohedoro</a>
+                </div>
+                
+                <div id="slide-1" class="grid-item item-4"> <img src="MARRIAGETOXIN-Anime-visul-1-e1774346991341.jpeg" alt="">
+                <a href="" class="text1">Marriagetoxin</a>
+                </div>
+
+                <div id="slide-1" class="grid-item item-5"> <img src="ggegeg.jpeg" alt="">
+                <a href="" class="text1">One Piece</a>
+                </div>
+
+                <div id="slide-1" class="grid-item item-6"> <img src="Nippon-Sangoku-Prime-Video_News_FI-750x392.jpg" alt="">
+                <a href="" class="text1">Nippon Sangoku</a>
+                </div>
+
+                <div id="slide-1" class="grid-item item-7"> <img src="6482-Header_AkaneBanashi_2000x800.jpg" alt="">
+                <a href="" class="text1">akane-banashi</a>
+                </div>
+
+                <div id="slide-1" class="grid-item item-8"> <img src="Detective-Conan-1-696x388.jpg" alt="">
+                <a href="" class="text1">Detective Conan</a>
+                </div>
+
+                <div id="slide-1" class="grid-item item-8"> <img src="9784063728798-us.jpg" alt="">
+                  <a href="" class="text1">Kami no Shizuku</a>
+                  </div>
+
+                  <div id="slide-1" class="grid-item item-8"> <img src="Snowball_Earth_(manga)_1.png" alt="">
+                    <a href="" class="text1">Snowball Earth</a>
+                    </div>
+
+                    <div id="slide-1" class="grid-item item-8"> <img src="tumblr_f1fed8166102ad3e3be9ebdb46c79c11_e476ce50_1280.jpg" alt="">
+                      <a href="" class="text1">Awajima Hyakkei</a>
+                      </div>
+
+                      <div id="slide-1" class="grid-item item-8"> <img src="Kirio_Fanclub_volume_1_cover.jpg" alt="">
+                        <a href="" class="text1">Kirio Fanclub</a>
+                        </div>
+                
+
+            </div>
+            <div class="slider-nav">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+        
+            </div>
+
+          </div>
+
+            </div>
+
+          </section> 
+
+            <section class="container">
+              <header class="w3-padding-16 w3-center">
+                <h2 tabindex="0"> Buy Manga NFT</h2> <br>
+                
+              </header>
+              <h3 >1. INKARNASI </h3>
+              
+ 
+                <div class="card">
+                  <div class="card-body">
+                      <div class="card-top">
+                          <div class="card-owner">
+                              <div class="card-avatar"></div>
+                              <div class="card-user">
+                                  <span class="card-user-title">Product</span>
+                                  <span>NFT</span>
+                              </div>
+                          </div>
+                          <div class="card-creator">
+                              <div class="card-avatar"></div>
+                              <div class="card-user">
+                                  <span class="card-user-title">Created By</span>
+                                  <span>Nadyllllll</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-image">
+                          <img src="INKARNASI.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class="card-info">
+                      <p><b>Price</b>  3.00 CNPY</p>
+                      <p>$3</p>
+                  </div>
+                  <div class="card-footer">
+                      <span class="card-btn history">View History</span>
+                     <button  class="w3-bar-item w3-button  buy" id="mintBtn">Minting Now</button>
+                  </div>
+          
+              </div>
+            
+             <div class="pra">
+
+              <p class="rata"><span  style=color:#3a363b; >NFT Name :</span> <span >Inkarnasi NFT</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >Supply / Quantity :</span> <span >100</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >Blockchain :</span> <span >Canopy Testnet</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >Status :</span> <span style="color: rgb(88, 134, 19);">Ongoing</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >NFT Generation :</span> <span >First Generation</span> </p> <hr>
+              <p class="rata"><span style="color: #3a363b;">Information :</span> function this nft for  ownership identity and is used to open a particular Manga file, without having this NFT you are not allowed to open the manga file intended for this NFT holder.</p> <hr>
+              
+              
+              
+             </div>
+             
+              
+             </section>
+
+             <div class="Gallery">
+              
+              <h2 tabindex="0" class="container">Gallery</h2> 
+
+              <img src="https://wallpapercave.com/wp/wp11376939.jpg" class="anime-bg">
+              <img src="https://wallpapercave.com/wp/wp10460175.jpg" class="anime-bg">
+              <img src="thumb-1920-942096.jpg" class="anime-bg">
+              <img src="cool-anime-wallpaper.jpg" class="anime-bg">            
+              
+             </div>
+             
+            
+            
+
+            <div class="usr-repl-modal">
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+
+                </div>
+
+              
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+
+
+
+
+        
+        
+
+      </div>
+
+    
+
+      <aside class="w3-col l4 w3-container">
+        <h2 class="visually-hidden">Other News</h2>
+
+        <section class="w3-margin-bottom">
+          <h2 class="visually-hidden">Profile</h2>
+        
+          <div class="w3-container w3-black">
+            <h3 tabindex="0">introduction</h3>
+            <span class="rata"><p>Midorinime is a unique platform that connects mangaka with manga lovers around the world,  Midorinime has the following advantages :<br> 1. Being a platform for buying and selling manga works<br>2. Providing solutions for those who want to buy cosplay accessories<br> 3. Being a place for announcements if there are events that will be held by cosplayers in each country<br>
+               4. become a knowledge platform on how to become a mangaka <br> and Midorinime can be a place to watch or download anime.</p></span> 
+          </div>
+        </section>
+
+       
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Top Anime</h2>
+          </div>
+          
+       
+
+          
+          <ul class="w3-ul w3-hoverable">
+            <li >
+          
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+                          
+                <h3 >1. One Piece </h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adventure, Martial Arts, Shounen, Super Power</p>
+              </a> </span>
+                <img  src="top anime/one  piece/AAAABRKIQnGja8FW7HtFjgOF_TmYAR_dn3eeN2Cayj3Gm2kEhjSETNusxVJj712wh_n7reHNrt3Bt6_S_U7jF4h8ugUgeXYHpcqbzHxO.jpg"  alt=""> 
+              </div>
+              
+
+       
+            </li>
+       
+            
+            <li >
+          
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+                          
+                <h3 >2. Boruto </h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adventure, Martial Arts, Shounen, Super Power</p>
+              </a> </span>
+                <img  src="top anime/boruto/055162500_1437614355-boruto-naruto-movie-hl.jpg"  alt=""> 
+              </div>
+              
+
+       
+            </li>
+
+              <li>
+                <div class="w3-container w3-display-container w3-section ">
+                  <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>3. Naruto Shippuden</h3>
+                <p><span  style=color:#3a363b; >Genres :</span>Action, Adventure, Comedy, Martial Arts, Shounen, Super Power</p>
+              </a>
+              <img  src="top anime/naruto/naruto-shippuden.jpeg"  alt=""> 
+              </div>
+              
+            </li>
+
+            <li>
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>4. Bleach </h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adventure, Comedy, Shounen, Super Power, Supernatural</p>
+              </a>
+              <img  src="top anime/bleach/key_art_bleach.jpg"  alt=""> 
+            </div>
+            </li>
+            
+            <li>
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+           
+       
+                <h3>5. Solo Leveling Season 2  </i></h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adult Cast, Adventure, Fantasy, Magic, Urban Fantasy</p>
+              </a>
+              <img  src="top anime/solo leveling/solo-levelingarise-1jinw.jpg"  alt=""> 
+            </div>
+            </li>
+
+            
+
+          </ul>
+        </section>
+
+        
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Top Manga</h2>
+          </div>
+          <ul class="w3-ul w3-hoverable">
+            
+            <li>
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>1. Inkarnasi </h3>
+             
+              </a>
+              <img  src="top manga/Inkarnasi/INKARNASI.jpg"  alt=""> 
+            </div>
+            </li>
+            
+              <li>
+
+                <div class="w3-container w3-display-container w3-section ">
+                  <span  >               <a class="w3-block" href="" target="_blank">
+
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+ 
+                  <h3>2. Berserk </h3>
+               
+                </a>
+                <img  src="top manga/berserk/AAAABQodmeojgag-Zy7qOHXJOjqyyS4eWROBtTMFy2BkS155qOQ-Yq1FBOAzNk70rOy1gShUzg14GQO6CfTcHQ8ZAt6DXVf0JHdngG6r.jpg"  alt=""> 
+              </div>
+              </li>
+
+              <li>
+                <div class="w3-container w3-display-container w3-section ">
+                  <span  >               <a class="w3-block" href="" target="_blank">
+              <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>3. JoJo no Kimyou na Bouken </h3>
+               
+              </a>
+              <img  src="top manga/jojo/D3NFeUS.jpg"  alt=""> 
+            </div>
+            </li>
+            <li>
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+            <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>4. Vagabond </h3>
+                
+              </a>
+              <img  src="top manga/Vagabond/1_KyLyqNgg1A.jpg"  alt=""> 
+            </div>
+            </li>
+            <li>
+              <div class="w3-container w3-display-container w3-section ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+            <a class="w3-block" href="" target="_blank">
+       
+                <h3>5. One Piece   </i></h3>
+               
+              </a>
+              <img  src="top manga/one piece/one-piece-cool-hxhg60z6eqelyxwn.jpg"  alt=""> 
+            </div>
+            </li>
+
+
+           
+           
+          </ul>
+        </section>
+
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Movie Anime</h2>
+          </div>
+          <ul class="w3-ul w3-hoverable">
+            <li>
+              <a class="w3-block" >
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>Kimetsu no Yaiba Movie : Mugen Jou-hen</h3>
+             
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" >
+       
+                <h3>Sidonia no Kishi : Ai Tsumugu Hoshi</h3>
+               
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" >
+ 
+                <h3>Overlord Movie 3 : Sei Oukoku-hen</h3>
+                
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" >
+ 
+                <h3>Boku no Hero Academia the Movie 4 : You’re Next</h3>
+                
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="w3-white w3-margin-bottom usr-ads">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Shop </h2>
+          </div>
+          <div class="w3-container">
+            <div class="w3-container w3-display-container w3-section w3-light-grey">
+              <span class="" style=color:#0c0b0c; href="https://artrun.io/profile/adyaja" ><h3><b>Food</b> </h3>  </span>
+              <img src="5-anime-cocok-jadi-teman-makan-1574243728.webp" alt="">
+            </div>
+            <div class="w3-container w3-display-container w3-section w3-light-grey">
+              <span  class="" style=color:#0c0b0c;  href="https://opensea.io/0x6dcFfB450b77dDB8dE443c5d47Fc043B131F6439" target="_blank"> <h3><b>costume</b></h3>  </span>
+              <img src="istockphoto-627944024-612x612 (1).jpg" alt="">
+            </div>
+          </div>
+        </section>
+
+ 
+
+        
+       
+      </aside>
+
+    </div>
+
+    <div class="w3-container w3-padding-32">
+      <a class="w3-button w3-mobile w3-black" href="#"><span class="fa fa-arrow-up w3-margin-right"></span> To the top</a>
+    </div>
+
+  </main>
+
+  <footer class="w3-container w3-padding-32 w3-center w3-black">
+
+    <h2 class="visually-hidden">Contacts</h2>
+
+    <p>Go to <a href="index.html">Main</a></p>
+
+    <p>Create by <a href="https://www.typenote.io">Nady</a></p>
+
+    <p>Powered by <a href="https://www.w3schools.com/w3css/">W3.CSS</a></p>
+
+  </footer>
+
+  <script src="js/default.js"        async></script>
+  <script src="js/janeblog.js"       async></script>
+  <script src="js/focus-visible.js"  async></script>
+
+
+
+</body>
+</html>
