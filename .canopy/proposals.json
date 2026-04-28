@@ -1,0 +1,26 @@
+{
+  "663735cfe3c435488f3ab6d0fb54c3c3af30869c022fcb0a74a833a1d60cc585": {
+    "proposal": {
+      "type": "changeParameter",
+      "msg": {
+        "parameterSpace": "cons|fee|val|gov",
+        "parameterKey": "protocolVersion",
+        "parameterValue": "example",
+        "startHeight": 1,
+        "endHeight": 1000,
+        "signer": "4646464646464646464646464646464646464646"
+      },
+      "signature": {
+        "publicKey": "b86344324ebe160c33060939ceaed519507f8a12de1a62fef0b1632a79953e32c898259d0f467ec13e717f5481796dff",
+        "signature": "b14072bb6e430001d25da224cc298b26db9bb662569c02d64ed2401a0df04265e3c4a7938173f074e7ef168685da460105bbdae3b5e06e3cbebc0a6d1f33ad9eb01f248ac65407c23230d53db85216100b5ce7eecfe8374b05574ef90e0ae2c5"
+      },
+      "time": 1776771502951170,
+      "createdHeight": 1,
+      "fee": 10000,
+      "memo": "example",
+      "networkID": 1,
+      "chainID": 1
+    },
+    "approve": true
+  }
+}

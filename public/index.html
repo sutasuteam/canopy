@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Midorinime</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Typenote — W3.CSS: Jane Bloglife">
+  <meta name="keywords"    content="typenote, w3css, templates, jane, bloglife">
+  <meta name="author"      content="Gurov Dmitriy">
+  <meta name="robots"      content="noindex, follow">
+
+  <link rel="preload" href="font/woff2/Oswald-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/woff2/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="font/woff2/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" href="https://www.w3schools.com/w3css/4/w3.css"         as="style">
+  <link rel="preload" href="css/style.css"                                    as="style">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+   <link rel="shortcut icon" href="logo2-removebg-preview.png" type="image/x-icon">
+   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+   
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("btn").addEventListener("click", function() {
+        alert("Klik berhasil!");
+      });
+    });
+    </script>
+
+   <style>
+
+
+     button{
+
+position: absolute;
+
+right: 46px;
+
+display: inline-block;
+
+border: none;
+
+outline: none;
+
+background: none;
+
+font: arial bold;
+
+color: white;
+
+cursor: pointer;
+
+overflow: hidden;
+background-image: linear-gradient( 144deg, #080a08, #0b0f0d 50%, rgb(17, 19, 16)
+
+
+);
+
+
+}
+
+button::before{
+
+content: attr(data-text);
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+
+
+color: white;
+
+display: grid;
+
+place-items: center;
+
+transform: translateX(-105deg);
+
+transition: transform.25s;
+
+}
+
+button:hover::before{
+
+transform: none;
+
+}
+
+button span{
+
+display: inline-block;
+
+padding: 10px 20px;
+
+border: 2px solid #5842F3;
+
+transition :transform 0.25s;
+
+}button:hover span{
+  transform: translatex (105%)
+}
+
+
+
+
+   </style>
+
+</head>
+
+<body class=" w3css-jane-bloglife" >
+
+  <header>
+
+    <nav class="navbar">
+    
+        
+       
+
+       
+    
+        <nav class="w3-bar w3-black w3-hide-small">
+          <h2 class="visually-hidden">Navigation</h2>
+          <a class="w3-bar-item w3-button" ><span class="visually-hidden">Facebook</span><span class="fa fa-facebook-official"></span></a>
+          <a class="w3-bar-item w3-button" ><span class="visually-hidden">Instagram</span><span class="fa fa-instagram"></span></a>
+          <a class="w3-bar-item w3-button" ><span class="visually-hidden">discord</span><span class="fa fa-flickr"></span></a>
+          <a class="w3-bar-item w3-button" href="https://x.com/crypto_hits" target="_blank" ><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+          <a class="w3-bar-item w3-button" ><span class="visually-hidden">youtube</span><span class="fa fa-youtube"></span></a>
+          <a class="w3-bar-item w3-button" ><span class="visually-hidden">linkeding</span><span class="fa fa-linkedin"></span></a>
+          <a class="w3-bar-item w3-button" ><span class="visually-hidden">medium</span><span class="fa fa-medium"></span></a>
+     
+          
+          <button class="w3-bar-item wallet-btn" data-text="Connect Wallet"  id="connectBtn" >Connect Wallet</button>
+          <button class="w3-bar-item w3-button" id="disconnectBtn" style="display:none;">Disconnect</button>
+          <p id="walletAddress"></p>
+       
+          
+          <script src="wallet.js" defer></script>
+          <script src="mint.js" defer></script>
+          <!-- <script src="main.js" defer></script> -->
+    
+        </nav>
+
+
+
+    
+        <ul class="nav-menu" id="navMenu">
+          <li class="mobile-only"><a href="#">Home</a></li>
+          <li class="mobile-only"><a href="#">Anime List</a></li>
+          
+          <li class="mobile-only"><a href="#">Connect Wallet</a></li>
+          <br>
+        </ul>
+    
+        
+    
+        <div class="hamburger" id="hamburger">
+          ☰
+        </div>
+    
+      </div>
+    </nav>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("navMenu");
+    
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
+
+    <!-- <h1 class="visually-hidden"> list </h1>
+
+    <a class="skip-link" href="#main">skip-link</a>
+
+    <nav class="w3-bar w3-black w3-hide-small">
+      <h2 class="visually-hidden">Navigation</h2>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">Facebook</span><span class="fa fa-facebook-official"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">Instagram</span><span class="fa fa-instagram"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">discord</span><span class="fa fa-flickr"></span></a>
+      <a class="w3-bar-item w3-button" href="https://x.com/crypto_hits" target="_blank" ><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">youtube</span><span class="fa fa-youtube"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">linkeding</span><span class="fa fa-linkedin"></span></a>
+      <a class="w3-bar-item w3-button" ><span class="visually-hidden">medium</span><span class="fa fa-medium"></span></a>
+ 
+      
+      <button class="w3-bar-item " data-text="Connect Wallet"  id="connectBtn" >Connect Wallet</button>
+      <button class="w3-bar-item w3-button" id="disconnectBtn" style="display:none;">Disconnect</button>
+      <p id="walletAddress"></p>
+   
+      
+      <script src="wallet.js" defer></script>
+      <script src="mint.js" defer></script>
+      <script src="main.js" defer></script>
+
+    </nav> -->
+
+   
+  
+
+    <div class="w3-content ">
+
+      <div class="w3-container w3-padding-32  w3-center">
+        <p class="w3-xxxlarge usr-main-caption " tabindex="0" ><span class="text3d" style=color:#0dbd6b; >MIDORI</span><span class="text3d1">NIME</span></p> 
+        
+      </div>
+
+      
+          
+
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+ 
+
+  
+
+
+
+
+  <main class="w3-content " id="main">
+
+    <div class="w3-row w3-padding-64 w3-white">
+
+
+ 
+
+      <div class="w3-col l8 w3-container">
+
+        <div class="scroller">
+          <div class="scroller-inner" data-content="">
+            
+            <div class="scroller-item">✨ Welcome to Midorinime ✨</div>
+     
+        
+          </div>
+        </div>
+        <article class="w3-white w3-margin-bottom">
+          <div class="">
+     
+          <section class="container">
+            <h2 class="title">New Episodes</h2>
+          
+            <div class="anime-grid">
+              
+              <!-- CARD -->
+              <div class="anime-card">
+                <div class="thumb">
+                  <img src="wallpapersden.com_senku-ishigami-dr-stone_wxl.jpg" alt="">
+                  <span class="badge">Sub</span>
+                  <span class="views">443 Views</span>
+                </div>
+          
+                <div class="info">
+                  <h3>DR.STONE</h3>
+                  <p>Episode 235 </p>
+                </div>
+              </div>
+          
+              <!-- DUPLICATE -->
+              <div class="anime-card">
+                <div class="thumb">
+                  <img src="Reincarnation-no-Kaben-Anime-Visual-1-e1768759295571.jpg" alt="">
+                  <span class="badge">Sub</span>
+                  <span class="views">504 Views</span>
+                </div>
+          
+                <div class="info">
+                  <h3>Reincarnation no Kaben</h3>
+                  <p>Episode 4 </p>
+                </div>
+              </div>
+
+
+                        <!-- DUPLICATE -->
+                        <div class="anime-card">
+                          <div class="thumb">
+                            <img src="visual-1200x640.jpg" alt="">
+                            <span class="badge">Sub</span>
+                            <span class="views">194 Views</span>
+                          </div>
+                    
+                          <div class="info">
+                            <h3>Dorohedoro</h3>
+                            <p>Episode 4 </p>
+                          </div>
+                        </div>
+
+
+<!-- DUPLICATE -->
+<div class="anime-card">
+  <div class="thumb">
+    <img src="MARRIAGETOXIN-Anime-visul-1-e1774346991341.jpeg" alt="">
+    <span class="badge">Sub</span>
+    <span class="views">394 Views</span>
+  </div>
+
+  <div class="info">
+    <h3>Marriagetoxin</h3>
+    <p>Episode 4 </p>
+  </div>
+</div>
+<!-- DUPLICATE -->
+<div class="anime-card">
+  <div class="thumb">
+  <img src="ggegeg.jpeg" alt="">
+  <span class="badge">Sub</span>
+  <span class="views">554 Views</span>
+  </div>
+  
+  <div class="info">
+  <h3>One Piece</h3>
+  <p>Episode 1984 </p>
+  </div>
+  </div>
+<!-- DUPLICATE -->
+<div class="anime-card">
+  <div class="thumb">
+    <img src="Nippon-Sangoku-Prime-Video_News_FI-750x392.jpg" alt="">
+    <span class="badge">Sub</span>
+    <span class="views">2594 Views</span>
+  </div>
+
+  <div class="info">
+    <h3>Nippon Sangoku</h3>
+    <p>Episode 4 </p>
+  </div>
+</div>
+<!-- DUPLICATE -->
+<div class="anime-card">
+  <div class="thumb">
+    <img src="6482-Header_AkaneBanashi_2000x800.jpg" alt="">
+    <span class="badge">Sub</span>
+    <span class="views">3394 Views</span>
+  </div>
+
+  <div class="info">
+    <h3>akane-banashi</h3>
+    <p>Episode 4 </p>
+  </div>
+</div>
+
+
+<!-- DUPLICATE -->
+<div class="anime-card">
+<div class="thumb">
+<img src="Detective-Conan-1-696x388.jpg" alt="">
+<span class="badge">Sub</span>
+<span class="views">5794 Views</span>
+</div>
+
+<div class="info">
+<h3>Detective Conan</h3>
+<p>Episode 454 </p>
+</div>
+</div>
+
+<!-- DUPLICATE -->
+<div class="anime-card">
+<div class="thumb">
+<img src="Kirio_Fanclub_volume_1_cover.jpg" alt="">
+<span class="badge">Sub</span>
+<span class="views">2394 Views</span>
+</div>
+
+<div class="info">
+<h3>Kirio Fanclub</h3>
+<p>Episode 4 </p>
+</div>
+</div>
+<!-- DUPLICATE -->
+<div class="anime-card">
+  <div class="thumb">
+    <img src="9784063728798-us.jpg" alt="">
+    <span class="badge">Sub</span>
+    <span class="views">994 Views</span>
+  </div>
+
+  <div class="info">
+    <h3>Kami no Shizuku</h3>
+    <p>Episode 4 </p>
+  </div>
+</div>
+<!-- DUPLICATE -->
+<div class="anime-card">
+  <div class="thumb">
+    <img src="Snowball_Earth_(manga)_1.png" alt="">
+    <span class="badge">Sub</span>
+    <span class="views">3294 Views</span>
+  </div>
+
+  <div class="info">
+    <h3>Snowball Earth</h3>
+    <p>Episode 4 </p>
+  </div>
+</div>
+
+
+<!-- DUPLICATE -->
+<div class="anime-card">
+<div class="thumb">
+<img src="tumblr_f1fed8166102ad3e3be9ebdb46c79c11_e476ce50_1280.jpg" alt="">
+<span class="badge">Sub</span>
+<span class="views">1594 Views</span>
+</div>
+
+<div class="info">
+<h3>Awajima Hyakkei</h3>
+<p>Episode 4 </p>
+</div>
+</div>
+
+
+
+
+            </div>
+            <div class="pagination" id="pagination"></div>
+          </section>
+
+          <script>
+            const totalPages = 2757;
+            let currentPage = 1;
+            
+            const pagination = document.getElementById("pagination");
+            
+            function createButton(label, page, isActive = false) {
+              const btn = document.createElement("div");
+              btn.className = "page-btn" + (isActive ? " active" : "");
+              btn.innerText = label;
+            
+              btn.onclick = () => {
+                currentPage = page;
+                renderPagination();
+                loadPage(page);
+              };
+            
+              return btn;
+            }
+            
+            function renderPagination() {
+              pagination.innerHTML = "";
+            
+              // PREV
+              if (currentPage > 1) {
+                const prev = document.createElement("div");
+                prev.className = "page-btn";
+                prev.innerText = "«";
+                prev.onclick = () => {
+                  currentPage--;
+                  renderPagination();
+                  loadPage(currentPage);
+                };
+                pagination.appendChild(prev);
+              }
+            
+              // ALWAYS show page 1
+              pagination.appendChild(createButton(1, 1, currentPage === 1));
+            
+              // DOTS sebelum current
+              if (currentPage > 3) {
+                const dots = document.createElement("div");
+                dots.className = "page-btn";
+                dots.innerText = "...";
+                pagination.appendChild(dots);
+              }
+            
+              // RANGE sekitar current
+              let start = Math.max(2, currentPage - 1);
+              let end = Math.min(totalPages - 1, currentPage + 1);
+            
+              for (let i = start; i <= end; i++) {
+                pagination.appendChild(createButton(i, i, i === currentPage));
+              }
+            
+              // DOTS setelah current
+              if (currentPage < totalPages - 2) {
+                const dots = document.createElement("div");
+                dots.className = "page-btn";
+                dots.innerText = "...";
+                pagination.appendChild(dots);
+              }
+            
+              // LAST PAGE
+              if (totalPages > 1) {
+                pagination.appendChild(
+                  createButton(totalPages, totalPages, currentPage === totalPages)
+                );
+              }
+            
+              // NEXT
+              if (currentPage < totalPages) {
+                const next = document.createElement("div");
+                next.className = "page-btn next";
+                next.innerText = "Next »";
+            
+                next.onclick = () => {
+                  currentPage++;
+                  renderPagination();
+                  loadPage(currentPage);
+                };
+            
+                pagination.appendChild(next);
+              }
+            }
+            
+            // LOAD DATA (kamu sambungkan ke grid anime)
+            function loadPage(page) {
+              console.log("Load page:", page);
+            
+              // contoh:
+              // fetch(`/api/anime?page=${page}`)
+              //   .then(res => res.json())
+              //   .then(data => renderAnime(data));
+            }
+            
+            // INIT
+            renderPagination();
+            </script>
+
+
+            <section class="container">
+              <header class="w3-padding-16 w3-center">
+                <h2 tabindex="0"> Buy Manga NFT</h2> <br>
+                
+              </header>
+              <h3 >1. INKARNASI </h3>
+              
+ 
+                <div class="card">
+                  <div class="card-body">
+                      <div class="card-top">
+                          <div class="card-owner">
+                              <div class="card-avatar"></div>
+                              <div class="card-user">
+                                  <span class="card-user-title">Product</span>
+                                  <span>NFT</span>
+                              </div>
+                          </div>
+                          <div class="card-creator">
+                              <div class="card-avatar"></div>
+                              <div class="card-user">
+                                  <span class="card-user-title">Created By</span>
+                                  <span>Nadyllllll</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-image">
+                          <img src="INKARNASI.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class="card-info">
+                      <p><b>Price</b>  3.00 CNPY</p>
+                      <p>$3</p>
+                  </div>
+                  <div class="card-footer">
+                      <span class="card-btn history">View History</span>
+                     <button  class="w3-bar-item w3-button  buy" id="mintBtn">Minting Now</button>
+                  </div>
+          
+              </div>
+            
+             <div class="info-text">
+              <hr>
+              <p class="rata"><span  style=color:#3a363b; >NFT Name :</span> <span >Inkarnasi</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >Supply / Quantity :</span> <span >100</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >Blockchain :</span> <span >Canopy Testnet</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >Status :</span> <span style="color: rgb(88, 134, 19);">Ongoing</span> </p> <hr>
+              <p class="rata"><span  style=color:#3a363b; >NFT Generation :</span> <span >First Generation</span> </p> <hr>
+              <p class="rata"><span style="color: #3a363b;">Information :</span> function this nft for  ownership identity<br> and is used to open a particular  Manga file, without <br>having this NFT you are not allowed to open manga<br> file intended for this NFT holder.</p> <hr>
+              
+              
+              
+
+              <br><br>
+              <header class="w3-padding-16 w3-center">
+                <h2>Generate Video from manga</h2> <br>
+                
+              </header>
+
+              
+              <form id="generateForm" onsubmit="generateVideo(event)">
+             <div class="container2">
+            
+              
+              <!-- LEFT PANEL -->
+              <div class="left-panel">
+                <div class="video-box">
+                  <video id="preview" controls></video>
+                </div>
+
+                
+                <div class="upload-box gen">
+
+                  <input type="file" id="imageInput" name="image" accept="image/*">
+
+                  <button type="submit" id="generateBtn">Generate Video</button>
+                </div>
+              </div>
+            
+              <!-- RIGHT PANEL -->
+              <div class="right-panel">
+                
+            
+                <div class="anime-card">
+                  <img class="gambar-khusus" src="photo_2026-04-26_07-00-50.jpg">                 
+                  <button class="generate-btn2">Priview Manga</button>
+                  <div class="progress">
+                    <div class="progress__fill"></div>
+                    <span class="progress__text">0%</span>
+                  </div>
+                </form>
+                </div>
+             
+              
+              </div>
+            
+            </div>
+
+
+            <div class="usr-repl-modal">
+              <div class="w3-row w3-padding-16 w3-animate-left">
+
+                <div class="w3-col m3">
+
+                </div>
+
+
+              </div>
+            </div>
+
+ 
+
+
+          </div>
+        </article>
+
+        <br>
+
+        <div class="testimonials">
+          <div class="inner">
+            <h1>Testimonials</h1>
+            <div class="border"></div>
+        
+            <div class="row">
+              <div class="col">
+                <div class="testimonial">
+                  <img src="p1.png" alt="">
+                  <div class="name">Brian</div>
+                  <div class="stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+        
+                  <p>
+                    “Midorinime feels like the future of anime platforms. I can watch episodes, collect manga, and even own NFTs that unlock exclusive content. It’s more than just streaming—it’s a whole new experience.” <br><br>
+                  </p>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="testimonial">
+                  <img src="p2.png" alt="">
+                  <div class="name">Zelona</div>
+                  <div class="stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+        
+                  <p>
+                    “I love how Midorinime blends manga with blockchain technology. The NFT-based access system makes every piece of content feel exclusive and valuable. It’s something completely different from other platforms.”
+                  </p>
+                </div>
+              </div>
+        
+              <div class="col">
+                <div class="testimonial">
+                  <img src="p3.png" alt="">
+                  <div class="name">Sonya</div>
+                  <div class="stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+        
+                  <p>
+                    “As an anime and cosplay enthusiast, this platform has everything I need. From watching anime to exploring NFT-based manga and events, Midorinime brings everything together in one place.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+
+
+
+
+    
+
+      <aside class="w3-col l4 w3-container">
+        <h2 class="visually-hidden">Other News</h2>
+
+        <section class="w3-margin-bottom">
+          <h2 class="visually-hidden">Profile</h2>
+        
+          <div class="w3-container w3-black">
+            <h3 tabindex="0">introduction</h3>
+            <span class="rata"><p>Midorinime is a unique platform that connects mangaka with manga lovers around the world,  Midorinime has the following advantages :<br> 1. Being a platform for buying and selling manga works<br>2. Providing solutions for those who want to buy cosplay accessories<br> 3. Being a place for announcements if there are events that will be held by cosplayers in each country<br>
+               4. become a knowledge platform on how to become a mangaka <br> and Midorinime can be a place to watch or download anime. etc</p></span> <br>
+          </div>
+        </section>
+
+       
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Top Anime</h2>
+          </div>
+          
+       
+
+          
+          <ul class="w3-ul w3-hoverable anime-item">
+            <li >
+          
+              <div class="  ">
+                <span  >               <a class="kw3-bloc" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+                          
+                <h3 >1. One Piece </h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adventure, Martial Arts, Shounen, Super Power</p>
+              </a> </span>
+                
+              </div>
+              
+
+       
+            </li>
+       
+            
+            <li >
+          
+              <div class=" ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+                          
+                <h3 >2. Boruto </h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adventure, Martial Arts, Shounen, Super Power</p>
+              </a> </span>
+                
+              </div>
+              
+
+       
+            </li>
+
+              <li>
+                <div class=" ">
+                  <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>3. Naruto Shippuden</h3>
+                <p><span  style=color:#3a363b; >Genres :</span>Action, Adventure, Comedy, Martial Arts, Shounen, Super Power</p>
+              </a>
+              
+              </div>
+              
+            </li>
+
+            <li>
+              <div class=" ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>4. Bleach </h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adventure, Comedy, Shounen, Super Power, Supernatural</p>
+              </a>
+             
+            </div>
+            </li>
+            
+            <li>
+              <div class=" ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+           
+       
+                <h3>5. Solo Leveling Season 2  </i></h3>
+                <p><span  style=color:#3a363b; >Genres :</span> Action, Adult Cast, Adventure, Fantasy, Magic, Urban Fantasy</p>
+              </a>
+           
+            </div>
+            </li>
+
+            
+
+          </ul>
+        </section>
+
+        
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Top Manga</h2>
+          </div>
+          <ul class="w3-ul w3-hoverable">
+            
+            <li>
+              <div class=" ">
+                <span  >               <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>1. Inkarnasi </h3>
+             
+              </a>
+              <img  src="top manga/Inkarnasi/INKARNASI.jpg"  alt=""> 
+            </div>
+            </li>
+            
+              <li>
+
+                <div class="">
+                  <span  >               <a class="w3-block" href="" target="_blank">
+
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+ 
+                  <h3>2. Berserk </h3>
+               
+                </a>
+                <img  src="top manga/berserk/AAAABQodmeojgag-Zy7qOHXJOjqyyS4eWROBtTMFy2BkS155qOQ-Yq1FBOAzNk70rOy1gShUzg14GQO6CfTcHQ8ZAt6DXVf0JHdngG6r.jpg"  alt=""> 
+              </div>
+              </li>
+
+              <li>
+                <div class="">
+                  <span  >               <a class="w3-block" href="" target="_blank">
+              <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>3. JoJo no Kimyou na Bouken </h3>
+               
+              </a>
+              <img  src="top manga/jojo/D3NFeUS.jpg"  alt=""> 
+            </div>
+            </li>
+            <li>
+              <div class="">
+                <span  >               <a class="w3-block" href="" target="_blank">
+            <a class="w3-block" href="" target="_blank">
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>4. Vagabond </h3>
+                
+              </a>
+              <img  src="top manga/Vagabond/1_KyLyqNgg1A.jpg"  alt=""> 
+            </div>
+            </li>
+            <li>
+              <div class="">
+                <span  >               <a class="w3-block" href="" target="_blank">
+            <a class="w3-block" href="" target="_blank">
+       
+                <h3>5. One Piece   </i></h3>
+               
+              </a>
+              <img  src="top manga/one piece/one-piece-cool-hxhg60z6eqelyxwn.jpg"  alt=""> 
+            </div>
+            </li>
+
+
+           
+           
+          </ul>
+        </section>
+
+
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Movie Anime</h2>
+          </div>
+          <ul class="w3-ul w3-hoverable">
+            <li>
+              <a class="w3-block" >
+             
+                  <source type="image/webp"
+                          srcset="image/avatar_smoke.webp">
+
+                <h3>Kimetsu no Yaiba Movie : Mugen Jou-hen</h3>
+             
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" >
+       
+                <h3>Sidonia no Kishi : Ai Tsumugu Hoshi</h3>
+               
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" >
+ 
+                <h3>Overlord Movie 3 : Sei Oukoku-hen</h3>
+                
+              </a>
+            </li>
+            <li>
+              <a class="w3-block" >
+ 
+                <h3>Boku no Hero Academia the Movie 4 : You’re Next</h3>
+                
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="w3-white w3-margin-bottom usr-ads">
+          <div class="w3-container w3-black">
+            <h2 tabindex="0">Online Shop </h2>
+          </div>
+          <div class="">
+            <div class="thumbb  ">
+              <span class="" style=color:#0c0b0c; href="https://artrun.io/profile/adyaja" ><h3><b>Food</b> </h3>  </span>
+              <img src="thumb-1920-1221643.jpg" alt="">
+            </div>
+            <div class="thumbb  ">
+              <span  class="" style=color:#0c0b0c;  href="https://opensea.io/0x6dcFfB450b77dDB8dE443c5d47Fc043B131F6439" target="_blank"> <h3><b>costume</b></h3>  </span>
+              <img src="istockphoto-627944024-612x612 (1).jpg" alt="">
+            </div>
+          </div>
+        </section>
+
+ 
+
+        
+       
+      </aside>
+
+    </div>
+
+    <div class="w3-container w3-padding-32">
+      <a class="w3-button w3-mobile w3-black" href="#"><span class="fa fa-arrow-up w3-margin-right"></span> To the top</a>
+    </div>
+
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+  
+      <!-- Brand -->
+      <div class="footer-brand">
+        
+          <p class="w3-xxxlarge usr-main-caption " tabindex="0" ><span class="text3d" style=color:#0dbd6b; >MIDORI</span><span class="text3d1">NIME</span></p> 
+          
+        
+        <p>Platform for manga lovers, creators, and Web3 anime ecosystem.</p>
+      </div>
+  
+      <!-- Navigation -->
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Anime List</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social -->
+      <div class="footer-social"> 
+        <h3>Powered By</h3>
+      
+        <div class="social-icons">
+          <a href="#" class="icon"><img  src="icon/Nav logo.svg" alt="canopy"></a>
+
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2026 Midorinime. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/default.js"        async></script>
+  <script src="js/janeblog.js"       async></script>
+  <script src="js/focus-visible.js"  async></script>
+
+
+    
+  <script>
+    function updateProgressBar(value) {
+      const bar = document.querySelector(".progress__fill");
+      const text = document.querySelector(".progress__text");
+      if (!bar || !text) return;
+      bar.style.width = value + "%";
+      text.textContent = value + "%";
+    }
+    
+    async function generateVideo(event) {
+      event.preventDefault();
+    
+      console.log("Generate diklik");
+    
+      const btn = document.getElementById("generateBtn");
+      const file = document.getElementById("imageInput").files[0];
+    
+      if (!file) {
+        alert("Pilih gambar dulu!");
+        return;
+      }
+    
+      const formData = new FormData();
+      formData.append("image", file);
+    
+      btn.disabled = true;
+      btn.textContent = "Generating...";
+      updateProgressBar(10);
+    
+      try {
+        const res = await fetch("http://localhost:3000/generate", {
+          method: "POST",
+          body: formData
+        });
+    
+        const data = await res.json();
+    
+        if (!res.ok) {
+          alert("Gagal generate: " + JSON.stringify(data));
+          return;
+        }
+    
+        const video = document.getElementById("preview");
+        video.src = data.video;
+        video.load();
+        video.play();
+    
+        updateProgressBar(100);
+      } catch (err) {
+        console.error(err);
+        alert("Gagal connect ke server");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Generate Video";
+      }
+    }
+    </script>
+    </body>
+    </html>
