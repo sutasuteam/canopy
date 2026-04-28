@@ -1,0 +1,73 @@
+{
+    "7": {
+      "inputs": {
+        "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+      },
+      "class_type": "CheckpointLoaderSimple"
+    },
+    "20": {
+      "inputs": {
+        "image": "input.png"
+      },
+      "class_type": "LoadImage"
+    },
+    "21": {
+      "inputs": {
+        "pixels": ["20", 0],
+        "vae": ["7", 2]
+      },
+      "class_type": "VAEEncode"
+    },
+    "14": {
+      "inputs": {
+        "text": "anime style, manga panel, cinematic lighting, subtle motion, high detail",
+        "clip": ["7", 1]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "15": {
+      "inputs": {
+        "text": "low quality, blurry, bad anatomy, worst quality",
+        "clip": ["7", 1]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "10": {
+      "inputs": {
+        "seed": 380532094863048,
+        "steps": 8,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 0.75,
+        "model": ["7", 0],
+        "positive": ["14", 0],
+        "negative": ["15", 0],
+        "latent_image": ["21", 0]
+      },
+      "class_type": "KSampler"
+    },
+    "11": {
+      "inputs": {
+        "samples": ["10", 0],
+        "vae": ["7", 2]
+      },
+      "class_type": "VAEDecode"
+    },
+"19": {
+  "inputs": {
+    "frame_rate": 8,
+    "loop_count": 0,
+    "filename_prefix": "Midori",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 28,
+    "save_metadata": true,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "images": ["11", 0]
+  },
+  "class_type": "VHS_VideoCombine"
+}
+  }
