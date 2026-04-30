@@ -1,14 +1,17 @@
 {
   "name": "midorinime",
   "version": "1.0.0",
-  "description": "",
+  "description": "<img src=\"./canopy-logo-white-bg.svg\" alt=\"Canopy Logo\" width=\"500\"/>",
   "main": "index.js",
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "axios": "^1.15.2",
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "ethers": "^6.16.0",
     "express": "^5.2.1",
     "multer": "^2.1.1",
+    "openai": "^6.35.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.8"
   },
@@ -21,5 +24,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sutasuteam/canopy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sutasuteam/canopy/issues"
+  },
+  "homepage": "https://github.com/sutasuteam/canopy#readme"
 }

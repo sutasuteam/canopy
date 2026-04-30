@@ -2,16 +2,19 @@
   "logLevel": "info",
   "chainId": 1,
   "sleepUntil": 0,
-  "rootChain": [
-    {
-      "chainId": 1,
-      "url": "http://localhost:50002"
-    }
-  ],
+"rootChain": [
+  {
+    "chainId": 1,
+    "url": "http://localhost:50002"
+  }
+],
+"plugin": "go",
+
+
   "runVDF": true,
   "headless": false,
   "autoUpdate": true,
-  "plugin": "go",
+  
 
   "level": 0,
   "logStructured": false,

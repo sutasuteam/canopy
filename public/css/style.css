@@ -211,6 +211,7 @@
       box-shadow: 0 16px 32px #c7c7c7;
       float: left;
       margin-right: 30px
+      
   }
   
   .card-body {
@@ -580,6 +581,8 @@ body {
   overflow: hidden;
 
 }
+
+
 button:hover {
   cursor: pointer;
 }
@@ -2227,6 +2230,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: #444;
+  
 
   /* INI YANG PENTING */
   word-wrap: break-word;
@@ -2706,4 +2710,156 @@ body {
 
 .anime-item p b {
   color: #111;
+}
+
+.nft-info {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px 25px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.nft-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nft-row:last-child {
+  border-bottom: none;
+}
+
+/* LABEL (kiri) */
+.nft-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* VALUE (kanan) */
+.nft-value {
+  font-weight: 700;
+  color: #111;
+  font-size: 15px;
+  text-align: right;
+}
+
+/* STATUS */
+.status {
+  font-weight: 700;
+  color: #16a34a;
+  background: rgba(22, 163, 74, 0.1);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* DESKRIPSI */
+.nft-description {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  padding-top: 10px;
+}
+
+/* TITLE */
+.nft-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.nft-info {
+  background: linear-gradient(175deg, #ffffff, #f8fafc);
+}
+
+.nft-title {
+  background: linear-gradient(90deg, #235c38, #4ade80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ai-nft-preview {
+  margin-top: 28px;
+  padding: 28px;
+  border-radius: 18px;
+  background: #ffffff; /* 👈 putih */
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  color: #222;
+}
+
+.ai-nft-preview h3 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #16a34a; /* hijau cocok dengan tema */
+}
+
+.ai-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.ai-card img {
+  width: 150px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+.ai-info {
+  flex: 1;
+}
+
+.ai-info p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #444;
+}
+
+.ai-info b {
+  color: #111;
+}
+
+#aiNftName {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+#aiNftToken {
+  color: #666;
+  font-size: 13px;
+}
+
+#aiNftDesc {
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.nama-class-gambar {
+  display: none;
+}
+
+.anime-animation {
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.anime-animation img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
 }

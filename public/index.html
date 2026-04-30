@@ -150,7 +150,7 @@ transition :transform 0.25s;
        
           
           <script src="wallet.js" defer></script>
-          <script src="mint.js" defer></script>
+          <script src="/mint.js" defer></script>
           <!-- <script src="main.js" defer></script> -->
     
         </nav>
@@ -536,13 +536,13 @@ transition :transform 0.25s;
             renderPagination();
             </script>
 
-
+            <br>
             <section class="container">
               <header class="w3-padding-16 w3-center">
                 <h2 tabindex="0"> Buy Manga NFT</h2> <br>
                 
               </header>
-              <h3 >1. INKARNASI </h3>
+              <h3 >1. INKARNASI AI</h3>
               
  
                 <div class="card">
@@ -551,7 +551,7 @@ transition :transform 0.25s;
                           <div class="card-owner">
                               <div class="card-avatar"></div>
                               <div class="card-user">
-                                  <span class="card-user-title">Product</span>
+                                  <span class="card-user-title">My Product</span>
                                   <span>NFT</span>
                               </div>
                           </div>
@@ -568,28 +568,90 @@ transition :transform 0.25s;
                       </div>
                   </div>
                   <div class="card-info">
-                      <p><b>Price</b>  3.00 CNPY</p>
+                      <p><b>Price</b>  0.02 CNPY</p>
                       <p>$3</p>
                   </div>
                   <div class="card-footer">
                       <span class="card-btn history">View History</span>
-                     <button  class="w3-bar-item w3-button  buy" id="mintBtn">Minting Now</button>
+                     
+                      
+                     <button  class="w3-bar-item w3-button  buy" id="mintBtn"onclick="aiMint()">AI Mint NFT</button>
                   </div>
           
               </div>
+
+
             
              <div class="info-text">
-              <hr>
+              <!-- <hr>
               <p class="rata"><span  style=color:#3a363b; >NFT Name :</span> <span >Inkarnasi</span> </p> <hr>
               <p class="rata"><span  style=color:#3a363b; >Supply / Quantity :</span> <span >100</span> </p> <hr>
               <p class="rata"><span  style=color:#3a363b; >Blockchain :</span> <span >Canopy Testnet</span> </p> <hr>
               <p class="rata"><span  style=color:#3a363b; >Status :</span> <span style="color: rgb(88, 134, 19);">Ongoing</span> </p> <hr>
               <p class="rata"><span  style=color:#3a363b; >NFT Generation :</span> <span >First Generation</span> </p> <hr>
               <p class="rata"><span style="color: #3a363b;">Information :</span> function this nft for  ownership identity<br> and is used to open a particular  Manga file, without <br>having this NFT you are not allowed to open manga<br> file intended for this NFT holder.</p> <hr>
+               -->
+               <div class="nft-info">
+                <div class="nft-title">NFT Details</div>
               
+                <div class="nft-row">
+                  <div class="nft-label">NFT Name</div>
+                  <div class="nft-value">Inkarnasi AI</div>
+                </div>
               
+                <div class="nft-row">
+                  <div class="nft-label">Supply</div>
+                  <div class="nft-value">100</div>
+                </div>
+              
+                <div class="nft-row">
+                  <div class="nft-label">Blockchain</div>
+                  <div class="nft-value">Canopy Testnet</div>
+                </div>
               
 
+              
+                <div class="nft-row">
+                  <div class="nft-label">Generation</div>
+                  <div class="nft-value">First Generation</div>
+                </div>
+
+                <div class="nft-row">
+                  <div class="nft-label">Status</div>
+                  <div class="nft-value status">Ongoing</div>
+                </div>
+              
+                <div class="nft-description">
+                  This NFT acts as an ownership key to unlock exclusive manga content,  without<br>
+                  having this NFT you are not allowed to open manga
+                  file intended <br>for this NFT holder. <br>
+                </div>
+              </div>
+
+
+              <div class="ai-nft-preview">
+                <h3>AI NFT Preview</h3>
+              
+                <div class="ai-card">
+                  <img id="aiNftImage" src="images/default.png" alt="AI NFT Preview">
+              
+                  <div class="ai-info">
+                    <p><b>Name:</b> <span id="aiNftName">-</span></p>
+                    <p><b>Description:</b></p>
+                    <p id="aiNftDesc">AI NFT result will appear here.</p>
+                    <p><b>Token ID:</b> <span id="aiNftToken">-</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <img class="nama-class-gambar" id="aiNftImage" src="images/inkarnasi.png" width="20px">
+
+<span id="aiNftName"></span>
+<p id="aiNftDesc"></p>
+<span id="aiNftToken"></span>
+              
+              
+              <br>
               <br><br>
               <header class="w3-padding-16 w3-center">
                 <h2>Generate Video from manga</h2> <br>
@@ -674,7 +736,7 @@ transition :transform 0.25s;
                   </div>
         
                   <p>
-                    “Midorinime feels like the future of anime platforms. I can watch episodes, collect manga, and even own NFTs that unlock exclusive content. It’s more than just streaming—it’s a whole new experience.” <br><br>
+                    “Midorinime feels like the future of anime platforms. I can watch episodes, collect manga, and even own NFTs that unlock exclusive content. It’s more than just streaming—it’s a whole new experience.” 
                   </p>
                 </div>
               </div>
@@ -962,14 +1024,23 @@ transition :transform 0.25s;
           <div class="">
             <div class="thumbb  ">
               <span class="" style=color:#0c0b0c; href="https://artrun.io/profile/adyaja" ><h3><b>Food</b> </h3>  </span>
-              <img src="thumb-1920-1221643.jpg" alt="">
+              <img src="5454042-anime-anime-girls-digital-art-artwork-pixiv-looking-at-viewer.jpg" alt="">
             </div>
             <div class="thumbb  ">
               <span  class="" style=color:#0c0b0c;  href="https://opensea.io/0x6dcFfB450b77dDB8dE443c5d47Fc043B131F6439" target="_blank"> <h3><b>costume</b></h3>  </span>
               <img src="istockphoto-627944024-612x612 (1).jpg" alt="">
             </div>
           </div>
+          <div class="thumbb  ">
+            <span  class="" style=color:#0c0b0c;  href="https://opensea.io/0x6dcFfB450b77dDB8dE443c5d47Fc043B131F6439" target="_blank"> <h3><b></b></h3>  </span>
+            <img src="images/anime-loop.gif" alt="">
+          </div>
+        </div>
+
+
         </section>
+
+
 
  
 
